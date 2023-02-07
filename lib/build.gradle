@@ -1,0 +1,39 @@
+plugins {
+    id 'java-library'
+    id 'maven-publish'
+}
+
+
+targetCompatibility = "11"
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.eclipse.emf:org.eclipse.emf.ecore:+'
+}
+
+
+publishing {
+    publications {
+        myLibrary(MavenPublication) {
+            group = 'io.github.atlresearch'
+            artifactId 'emfmodelfuzzer'
+            version = '0.1'
+
+            from components.java
+        }
+    }
+
+    repositories {
+        maven {
+            name 'github'
+            url "https://maven.pkg.github.com/ATL-Research/EMFModelFuzzer"
+            credentials {
+                username = System.getenv("GITHUB_ACTOR")
+                password = System.getenv("GITHUB_TOKEN")
+            }
+        }
+    }
+}
