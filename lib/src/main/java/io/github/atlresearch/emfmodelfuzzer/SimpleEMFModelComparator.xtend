@@ -8,7 +8,7 @@ import org.eclipse.emf.ecore.EEnumLiteral
 import org.eclipse.emf.ecore.EObject
 import org.eclipse.emf.ecore.resource.Resource
 
-class SimpleModelComparator {
+class SimpleEMFModelComparator {
     def boolean compare(Resource expected, Resource actual, StringBuffer message) {
         compare("/contents", expected.contents, actual.contents, new HashMap, message, [index, it | index])
     }
