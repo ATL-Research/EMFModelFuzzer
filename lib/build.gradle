@@ -1,6 +1,9 @@
 plugins {
     id 'java-library'
     id 'maven-publish'
+
+    // for comparator
+    id "org.xtext.xtend" version '3.0.2'
 }
 
 
@@ -12,6 +15,9 @@ repositories {
 
 dependencies {
     implementation 'org.eclipse.emf:org.eclipse.emf.ecore:+'
+
+    // for comparator
+    implementation "org.eclipse.xtend:org.eclipse.xtend.lib:2.25.0"
 }
 
 
