@@ -17,7 +17,7 @@ dependencies {
     implementation 'org.eclipse.emf:org.eclipse.emf.ecore:+'
 
     // for comparator
-    implementation "org.eclipse.xtend:org.eclipse.xtend.lib:2.25.0"
+    implementation "org.eclipse.xtend:org.eclipse.xtend.lib:2.31.0"
 }
 
 
